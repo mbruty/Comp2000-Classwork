@@ -1,0 +1,12 @@
+# Default ignored files
+*.xml
+*.html
+*.class
+*.iml
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../:\Users\mikeb\IdeaProjects\Session 1\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
