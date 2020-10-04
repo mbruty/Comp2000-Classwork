@@ -1,10 +1,14 @@
 package net.bruty;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 import net.bruty.BST.BST;
+import net.bruty.arrays.CalendarMatching;
+import net.bruty.arrays.StringMeeting;
 import net.bruty.sorting.*;
 
 public class Main {
@@ -70,6 +74,27 @@ public class Main {
         }
 
         System.out.println(myBST.equals(newBST));
+
+        System.out.println("\t *** Calendar Matching ***");
+        List<StringMeeting> calendar1 = new ArrayList<>();
+        calendar1.add(new StringMeeting("9:00", "10:30"));
+        calendar1.add(new StringMeeting("12:00", "13:00"));
+        calendar1.add(new StringMeeting("16:00", "18:00"));
+        StringMeeting bounds1 = new StringMeeting("9:00", "20:00");
+
+        List<StringMeeting> calendar2 = new ArrayList<>();
+        calendar2.add(new StringMeeting("10:00", "11:30"));
+        calendar2.add(new StringMeeting("12:30", "14:30"));
+        calendar2.add(new StringMeeting("14:30", "15:00"));
+        calendar2.add(new StringMeeting("16:00", "17:00"));
+        StringMeeting bounds2 = new StringMeeting("10:00", "18:30");
+        List<StringMeeting> result = CalendarMatching.match(calendar1, bounds1, calendar2, bounds2, 30);
+        StringBuilder toPrint = new StringBuilder();
+        for(StringMeeting meeting: result){
+            toPrint.append("\n").append(meeting.start).append(" => ").append(meeting.end);
+        }
+
+        System.out.println(toPrint);
     }
 
     private static int[] createArray(int size){
