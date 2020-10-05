@@ -6,6 +6,7 @@ import java.util.*;
 import net.bruty.BST.BST;
 import net.bruty.arrays.AppartmentHunting;
 import net.bruty.arrays.CalendarMatching;
+import net.bruty.arrays.SmallestSubArraySort;
 import net.bruty.arrays.StringMeeting;
 import net.bruty.sorting.*;
 
@@ -102,6 +103,9 @@ public class Main {
         blocks.add(craftMap(new Boolean[]{false, true, false}));
         blocks.add(craftMap(new Boolean[]{false, true, true}));
         System.out.println(AppartmentHunting.apartmentHunting(blocks, new String[]{"gym", "school", "store"}));
+
+        System.out.println("\t*** Subarray Sort");
+        System.out.println(Arrays.toString(SmallestSubArraySort.subarraySort(new int[]{1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19})));
     }
 
     private static Map<String, Boolean> craftMap(Boolean[] bools) {
