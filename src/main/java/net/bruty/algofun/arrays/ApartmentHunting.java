@@ -3,7 +3,7 @@ package net.bruty.algofun.arrays;
 import java.util.List;
 import java.util.Map;
 
-public class AppartmentHunting {
+public class ApartmentHunting {
     public static int apartmentHunting(List<Map<String, Boolean>> blocks, String[] reqs) {
         int[][] minDistances = new int[reqs.length][];
         for (int i = 0; i < reqs.length; i++) {
