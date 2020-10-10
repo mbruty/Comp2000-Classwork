@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ApartmentHunting {
-    public static int apartmentHunting(List<Map<String, Boolean>> blocks, String[] reqs) {
+    public static int find(List<Map<String, Boolean>> blocks, String[] reqs) {
         int[][] minDistances = new int[reqs.length][];
         for (int i = 0; i < reqs.length; i++) {
             minDistances[i] = getMinDistances(blocks, reqs[i]);
